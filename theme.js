@@ -15,13 +15,13 @@ export const fonts = {
 };
 
 export const fontSizes = {
-  size1: '16px', // navbar items
-  size2: '17px', // more about me button
-  size3: '18px', // my work subtitles
-  size4: '19px', // navbar ariane name
-  size5: '23px', // main page quote
-  size6: '28px', // methodology quote
-  size6: '35px' // section titles
+  size1: '0.8vw', // navbar items
+  size2: '0.8vw', // more about me button
+  size3: '1vw', // my work subtitles
+  size4: '1.1vw', // navbar ariane name
+  size5: '1.3vw', // main page quote
+  size6: '1.5vw', // methodology quote
+  size7: '35px' // section titles
 }
 
 export const lineHeights = { //TODO: this wasn't working, unsure why

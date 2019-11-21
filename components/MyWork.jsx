@@ -2,20 +2,24 @@ import React from "react";
 import styled from 'styled-components';
 import {colors, fonts, fontSizes, lineHeights, letterSpacings} from '../theme';
 
-const Wrapper = styled.div`
-  background: ${colors.lightPink}
+const BigWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: ${colors.lightPink};
 `;
 
 const Title = styled.div`
   font-family: ${fonts.libreCaslon};
   font-size: ${fontSizes.size6}
   text-align: center;
-  padding-top: 1%;
+  padding: 1.5vw;
+  width: 100vw;
 `;
 
-const WorkBox = styled.div`
+const WorkImage = styled.div`
   width: 100vw;
-  height: 20vh;
+  height: 9vw;
   background: ${colors.black};
   transition: background 0.5s ease-in-out;
 
@@ -35,48 +39,51 @@ const WorkWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 16vw;
-  padding: 2%;
-  padding-left: 0.5%;
-  padding-right: 0.5%;
 `;
 
-const BoxesWrapper = styled.div `
+const WorkRow = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 50vw;
+  margin-bottom: 5vh;
 `
 
 const MyWork = () => (
-<Wrapper>
+  <BigWrapper>
+
   <Title>MY WORK</Title>
-  <BoxesWrapper>
+
+    <WorkRow>
     <WorkWrapper>
-      <WorkBox/>
+      <WorkImage/>
       <WorkTitle>PUBLICATIONS</WorkTitle>
     </WorkWrapper>
     <WorkWrapper>
-      <WorkBox/>
+      <WorkImage/>
       <WorkTitle>RESEARCH</WorkTitle>
     </WorkWrapper>
     <WorkWrapper>
-      <WorkBox/>
+      <WorkImage/>
       <WorkTitle>WORKSHOPS</WorkTitle>
     </WorkWrapper>
-    </BoxesWrapper>
-    <BoxesWrapper>
+    </WorkRow>
+
+    <WorkRow>
     <WorkWrapper>
-      <WorkBox/>
+      <WorkImage/>
       <WorkTitle>CONFERENCES</WorkTitle>
     </WorkWrapper>
     <WorkWrapper>
-      <WorkBox/>
+      <WorkImage/>
       <WorkTitle>LECTURES</WorkTitle>
     </WorkWrapper>
     <WorkWrapper>
-      <WorkBox/>
+      <WorkImage/>
       <WorkTitle>INSPIRATION TRIPS</WorkTitle>
     </WorkWrapper>
-  </BoxesWrapper>
-</Wrapper>
+    </WorkRow>
+
+</BigWrapper>
 );
 
 export default MyWork;

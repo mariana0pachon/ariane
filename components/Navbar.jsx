@@ -2,25 +2,30 @@ import React from "react";
 import styled from 'styled-components';
 import {colors, fonts, fontSizes} from '../theme';
 
-const Wrapper = styled.div`
-  width: 98vw;
+const BigWrapper = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+const Wrapper = styled.div`
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 5vw;
 `;
 
 const Name = styled.div`
   font-family: ${fonts.libreCaslon};
   font-size: ${fontSizes.size4};
   width: 25vw;
-  text-align: right;
+  text-align: center;
 `;
 
 const NavItemWrapper = styled.div`
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-around;
+  text-align: right;
   width: 50vw;
 `;
 
@@ -28,7 +33,6 @@ const NavItem = styled.div`
   font-family: ${fonts.playfair};
   font-size: ${fontSizes.size1};
   color: ${colors.grey};
-  width: 13%;
   transition: color 0.5s ease-in-out;
 
   &:hover {
@@ -37,6 +41,7 @@ const NavItem = styled.div`
 `;
 
 const Navbar = () => (
+  <BigWrapper>
   <Wrapper>
     <Name>ARIANE VAN DE VEN</Name>
     <NavItemWrapper>
@@ -47,6 +52,7 @@ const Navbar = () => (
       <NavItem>Contact</NavItem>
     </NavItemWrapper>
   </Wrapper>
+  </BigWrapper>
 );
 
 export default Navbar;

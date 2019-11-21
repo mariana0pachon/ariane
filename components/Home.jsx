@@ -3,17 +3,23 @@ import styled from 'styled-components';
 import {colors, fonts, fontSizes, lineHeights, letterSpacings} from '../theme';
 import profile from '../assets/profile.jpg'
 
-const Wrapper = styled.div`
+
+const BigWrapper = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 50vw;
 `;
 
 const ProfileImage = styled.div`
   width: 18vw;
-  height: 50vh;
+  height: 30vw;
   background-image: url(${profile});
-  margin-bottom: 2%;
 `;
 
 const HomeQuote = styled.div`
@@ -34,7 +40,7 @@ const HomeButton = styled.button`
   color: ${colors.black}
   border-radius: 30px;
   border: 0px;
-  padding: 1.5vh;
+  padding: 1vw;
   width: 10vw;
   margin: 15%;
   transition: color, background 0.5s ease-in-out;
@@ -54,6 +60,7 @@ const Column = styled.div`
 //TODO: change margin, that's bad
 
 const Home = () => (
+  <BigWrapper>
 <Wrapper>
   <ProfileImage/>
   <Column>
@@ -61,6 +68,7 @@ const Home = () => (
     <HomeButton>More About Me</HomeButton>
   </Column>
 </Wrapper>
+</BigWrapper>
 );
 
 export default Home;
