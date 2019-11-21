@@ -7,7 +7,11 @@ import MyMethodology from '~components/MyMethodology';
 import Contact from '~components/Contact';
 
 const App = () => <>
-hello world
+  <Navbar/>
+  <Home/>
+  <MyWork/>
+  <MyMethodology/>
+  <Contact/>
 </>;
 
 export default App;
