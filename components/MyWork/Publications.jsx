@@ -26,6 +26,7 @@ const Description = styled.div`
   font-family: ${fonts.playfair};
   font-size: ${fontSizes.size2};
   width: 25vw;
+  padding: 1vw;
 `;
 
 const ImageWrapper = styled.div`
@@ -40,6 +41,11 @@ const Image = styled.div`
   height: 10vw;
   background-size: cover;
   margin: 1vw;
+`;
+
+const Footer = styled.div`
+  background: ${colors.lightPink};
+  height: 5vw;
 `;
 
 const Publications = () => <>
@@ -63,6 +69,7 @@ const Publications = () => <>
         <Image img={pub1}/>
     </ImageWrapper>
   </Wrapper>
+  <Footer/>
 </>;
 
 export default Publications;

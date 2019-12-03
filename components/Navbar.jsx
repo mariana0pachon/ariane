@@ -49,6 +49,18 @@ const StyledLink = styled(Link)`
     }
 `;
 
+const WorksList = styled.div`
+  display: none;
+`;
+
+
+const WorkHover = styled(NavItem)`
+  &:hover ${WorksList} {
+    display: none;
+  }
+`;
+
+
 const scrollVertically = (amount) => {
   let y = window.innerWidth * (amount / 100);
   window.scrollTo(0, y);
@@ -61,7 +73,7 @@ const Navbar = () => (
     <NavItemWrapper>
       <StyledLink to='/'><NavItem>Home</NavItem></StyledLink>
       <StyledLink to='/aboutme'><NavItem>About Me</NavItem></StyledLink>
-      <StyledLink to='/'><NavItem onClick={() => scrollVertically(55) }>My Work</NavItem></StyledLink>
+      <StyledLink to='/'><WorkHover onClick={() => scrollVertically(55) }>My Work</WorkHover></StyledLink>
       <StyledLink to='/mymethodology'><NavItem>My Methodology</NavItem></StyledLink>
       <StyledLink to='/'><NavItem onClick={() => scrollVertically(205) }>Contact</NavItem></StyledLink>
     </NavItemWrapper>

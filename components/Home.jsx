@@ -8,7 +8,7 @@ import profile from '../assets/portraits/avdv5.jpg'
 const BigWrapper = styled.div`
   display: flex;
   justify-content: center;
-  height: 50vw;
+  height:40vw;
 `;
 
 const Wrapper = styled.div`
@@ -21,6 +21,7 @@ const ProfileImage = styled.div`
   width: 18vw;
   height: 30vw;
   background-image: url(${profile});
+  background-size: cover;
 `;
 
 const HomeQuote = styled.div`

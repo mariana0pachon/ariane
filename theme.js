@@ -22,7 +22,7 @@ export const fontSizes = {
   size4: '1.1vw', // navbar ariane name
   size5: '1.3vw', // main page quote
   size6: '1.5vw', // methodology quote
-  size7: '35px' // section titles
+  size7: '2vw' // section titles
 }
 
 export const lineHeights = { //TODO: this wasn't working, unsure why
