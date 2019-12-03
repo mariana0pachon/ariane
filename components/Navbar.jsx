@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useRef} from "react";
+import {Link} from 'react-router-dom'
 import styled from 'styled-components';
 import {colors, fonts, fontSizes} from '../theme';
 
@@ -40,16 +41,29 @@ const NavItem = styled.div`
   }
 `;
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;
+
+const scrollVertically = (amount) => {
+  let y = window.innerWidth * (amount / 100);
+  window.scrollTo(0, y);
+}
+
 const Navbar = () => (
   <BigWrapper>
   <Wrapper>
     <Name>ARIANE VAN DE VEN</Name>
     <NavItemWrapper>
-      <NavItem>Home</NavItem>
-      <NavItem>About Me</NavItem>
-      <NavItem>My Work</NavItem>
-      <NavItem>My Methodology</NavItem>
-      <NavItem>Contact</NavItem>
+      <StyledLink to='/'><NavItem>Home</NavItem></StyledLink>
+      <StyledLink to='/aboutme'><NavItem>About Me</NavItem></StyledLink>
+      <StyledLink to='/'><NavItem onClick={() => scrollVertically(55) }>My Work</NavItem></StyledLink>
+      <StyledLink to='/mymethodology'><NavItem>My Methodology</NavItem></StyledLink>
+      <StyledLink to='/'><NavItem onClick={() => scrollVertically(205) }>Contact</NavItem></StyledLink>
     </NavItemWrapper>
   </Wrapper>
   </BigWrapper>

@@ -1,18 +1,19 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import {colors, fonts, fontSizes, lineHeights, letterSpacings} from '../theme';
-import profile from '../assets/profile.jpg'
+import profile from '../assets/portraits/avdv5.jpg'
 
 
 const BigWrapper = styled.div`
   display: flex;
   justify-content: center;
+  height: 50vw;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 50vw;
 `;
 
@@ -46,8 +47,7 @@ const HomeButton = styled.button`
   transition: color, background 0.5s ease-in-out;
 
   &:hover {
-    background: ${colors.green};
-    color: ${colors.lightPink}
+    background: ${colors.blue};
   }
 `;
 //TODO: change margin, that's bad
@@ -65,7 +65,7 @@ const Home = () => (
   <ProfileImage/>
   <Column>
     <HomeQuote>“I am a trend expert and strategist who identifies socio-cultural trends to help my clients create products and services that bring real meaning and value for people today and in the future.”</HomeQuote>
-    <HomeButton>More About Me</HomeButton>
+    <Link to='/aboutme'><HomeButton>More About Me</HomeButton></Link>
   </Column>
 </Wrapper>
 </BigWrapper>

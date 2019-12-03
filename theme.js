@@ -1,4 +1,5 @@
 export const colors = {
+  pastelPink: '#FFEFE8',
   lightPink: '#EAE0DF',
   darkPink: '#DDB5B5',
   blue: '#A7BCC4',
